@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from './taskLists';
+import PropTypes from "prop-types"
 
 function DisplayTask({ task }) {
     if (!task || task.length === 0) {
@@ -14,4 +15,8 @@ function DisplayTask({ task }) {
   );
 }
 
+
+DisplayTask.propTypes={
+  task: PropTypes.array,
+}
 export default DisplayTask

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from "prop-types"
 
 function List({children}) {
     return (
@@ -7,5 +8,7 @@ function List({children}) {
         </div>
     )
 }
-
+List.propTypes= {
+    children:PropTypes.node.isRequired,
+}
 export default List

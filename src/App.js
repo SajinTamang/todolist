@@ -1,8 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
+
 import './App.css';
-import Tasks from "./data/TaskList";
+
 import DisplayTask from './components/DisplayTask';
+import Tasks from "./data/TaskList";
 
 
 function App() {
