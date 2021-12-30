@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
+import { useState } from 'react';
 import './App.css';
+import Tasks from "./data/TaskList";
+import DisplayTask from './components/DisplayTask';
+
 
 function App() {
+  const headerStyles=({
+      backgroundColor: "#ccc",
+      color:"black",
+  })
+  const [lists, setList] = useState(Tasks);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="toDoList" style={headerStyles}>
+      <h1>This is to do list</h1>
+      <DisplayTask task={lists} />
     </div>
   );
 }
